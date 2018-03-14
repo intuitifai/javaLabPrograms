@@ -17,7 +17,7 @@ Press Enter. Your local clone will be created.<br>
 -
 Open the src folder<br>
 
-cd javaLabPrograms/<br>
+cd javaLabPrograms/src/<br>
 
 Open any program in simple editor such as VIM or GEDIT<br>
 for example<br>
