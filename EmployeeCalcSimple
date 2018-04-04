@@ -1,0 +1,52 @@
+import java.util.Date;
+import java.util.Stack;
+public class Employee {
+
+	public static void main(String[] args) {
+	
+		
+		int[] EmpId = {1001,1002,1003,1004,1005,1006,1007};
+		String[] EmpName = {"Abc" , "Opqr" , "Ghi" , "Wxyz" , "Jklmn" , "Stuv" , "Def"};
+		String[] JoinDate = {"01/04/2009" , "12/11/2008" , "29/01/2013" , "16/07/2000" , "01/01/2000" , "12/06/2006"};
+		char[] DesignCode =  {'E' , 'C' , 'K' , 'R' , 'M','E','C'};
+		String[] Dept = {"R&D" , "PM" , "Acct" , "Front Desk" , "Engg" , "Manufacturing" , "PM"};
+		double[] basic = { 20000 ,30000 ,10000 ,12000 ,50000 ,23000 ,29000 };
+		double[] HRA = { 8000 , 12000 ,8000 ,6000 ,20000 ,9000 ,12000 };
+		double[] IT = {3000 ,9000 ,1000 ,2000 ,20000 ,4400 ,10000};
+		
+		char[] designationCode = {'E' , 'C' , 'K' , 'R' , 'M'};
+		String[] designation = {"Engineer" , "Consultant" , "Clerk" , "Receptionist" , "Manager"};
+		double[] DA = {20000 , 32000 , 12000 , 15000 , 40000};
+		
+		int flag = 0 ;
+		int id = Integer.parseInt(args[0]);
+		
+		for(int i = 0; i < EmpId.length ; i++) {
+			
+			if(EmpId[i] == id) {
+				flag = 1;
+				
+				
+				System.out.println("Employee ID : "+EmpId[i]);
+				System.out.println("Employee Name : "+EmpName[i]);
+				System.out.println("Department : "+Dept[i]);
+				char tempDesignCode = DesignCode[i];
+				for( int k = 0; k < designationCode.length ; k++) {
+					
+					if( DesignCode[i] == designationCode[k] ) {
+						System.out.println("Designation : "+ designation[k]);
+						double sum = basic[i] + HRA[i] - IT[i] + DA[k];
+						System.out.println("Total Salary : "+ sum );
+						break;
+					}
+				}
+			}
+			
+		}
+		if(flag == 0)
+			System.out.println("There is no employee with EmpId : "+id);
+	
+
+	}
+
+}
